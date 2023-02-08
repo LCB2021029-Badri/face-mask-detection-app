@@ -1,24 +1,21 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-kapt'
-    id 'kotlin-android-extensions'
 }
 
 android {
     namespace 'com.example.maskdetectionapp'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.maskdetectionapp"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         release {
             minifyEnabled false
@@ -49,19 +46,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //dependencies Badri added
-//    implementation 'com.google.android.material:material:1.8.0'
     implementation 'com.google.android.material:material:1.1.0'
-
-    //camera features within the activity
-    implementation "andoridx.camera:camera-core:1.0.0-beta06"
-    implementation "androidx.camera:camera-camera2:1.0.0-beta06"
-    implementation "androidx.camera:camera-lifecycle:1.0.0-beta06"
-    implementation "androidx.camera:camera-view:1.0.0-beta06"
-    implementation "androidx.camera:camera-extensions:1.0.0-alpha13"
 
     //tflite library
     implementation "org.tensorflow:tensorflow-lite-metadata:0.1.0-rc1"
     implementation "org.tensorflow:tensorflow-lite-gpu:2.2.0"
-
 
 }
